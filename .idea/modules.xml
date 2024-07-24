@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/Spring_Kafka.iml" filepath="$PROJECT_DIR$/.idea/Spring_Kafka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Kafka_Demo.iml" filepath="$PROJECT_DIR$/.idea/Kafka_Demo.iml" />
     </modules>
   </component>
 </project>
