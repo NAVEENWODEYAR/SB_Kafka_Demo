@@ -1,0 +1,32 @@
+
+server:
+  port: 9293
+
+spring:
+  application:
+    name: USER_SERVICE
+
+  datasource:
+    url: jdbc:mariadb://localhost:1996/endUser?createDatabaseIfNotExist=true
+    username: root
+    password: boss
+    driver-class-name: org.mariadb.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    # database-platform: org.hibernate.dialect.MariaDB103Dialect
+
+##Kafka consumer configuration,
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: group-1
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      auto-offset-reset: earliest
+#      enable-auto-commit: false
+#      fetch-min-size: 50000
+#      fetch-max-wait: 500
+#      max-poll-records: 10
+#      session-timeout-ms: 15000
