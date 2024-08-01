@@ -15,11 +15,4 @@ public class KafkaConsumerConfig {
         System.out.println(value);
         System.out.println("\n Kafka\n Listener");
     }
-
-    @KafkaListener(topics = AppConstants.LOCATION_UPDATE_TOPIC1,groupId = AppConstants.GROUP_ID1)
-    public void updateLocation1(String value) {
-        log.info("Location mil gaya from delivery agent!,");
-        System.out.println(value);
-        System.out.println("\n Kafka\n Listener");
-    }
 }

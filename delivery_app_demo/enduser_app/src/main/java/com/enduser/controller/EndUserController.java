@@ -11,6 +11,6 @@ public class EndUserController {
 
     @GetMapping
     public ResponseEntity<?> test(){
-        return ResponseEntity.ok("Welcome to User service!,");
+        return ResponseEntity.ok("Welcome to User service!(Consumer),");
     }
 }
