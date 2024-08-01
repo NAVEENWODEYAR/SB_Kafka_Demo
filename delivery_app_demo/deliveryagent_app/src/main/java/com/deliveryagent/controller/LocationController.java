@@ -32,6 +32,6 @@ public class LocationController {
             kafkaService.updateLocation("("+Math.round(Math.random()*100)+","+Math.round(Math.random()*100)+",)");
             log.info("Arrived at node,"+i);
         }
-        return new ResponseEntity<>(Map.of("message","Location updated"), HttpStatus.OK);
+        return new ResponseEntity<>(Map.of("message","Location updated by producer!,"), HttpStatus.OK);
     }
 }
