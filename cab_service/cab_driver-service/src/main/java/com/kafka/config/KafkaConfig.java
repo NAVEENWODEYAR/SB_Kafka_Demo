@@ -16,4 +16,11 @@ public class KafkaConfig {
                 .name(CAB_LOCATION)
                 .build();
     }
+    
+    @Bean
+    public NewTopic newTopic2(){
+        return TopicBuilder
+                .name("location")
+                .build();
+    }
 }
