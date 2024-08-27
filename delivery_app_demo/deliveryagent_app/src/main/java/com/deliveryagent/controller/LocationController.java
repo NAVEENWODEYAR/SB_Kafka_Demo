@@ -3,6 +3,9 @@ package com.deliveryagent.controller;
 import com.deliveryagent.service.KafkaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +18,17 @@ import java.util.Map;
 @RestController
 @RequestMapping("/api/location")
 @RequiredArgsConstructor
-@Slf4j
 public class LocationController {
 
+	private static final Logger log = LoggerFactory.getLogger(LocationController.class);
+	
     private final KafkaService kafkaService;
 
-    @GetMapping
+    public LocationController(KafkaService kafkaService) {
+		this.kafkaService = kafkaService;
+	}
+
+	@GetMapping
     public ResponseEntity<?> test(){
         log.warn("Test endPoint accessed");
         return ResponseEntity.ok("Welcome to Location\n Service");
