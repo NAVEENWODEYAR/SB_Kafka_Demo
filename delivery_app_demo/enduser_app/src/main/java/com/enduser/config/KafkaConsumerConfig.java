@@ -19,5 +19,6 @@ public class KafkaConsumerConfig {
         log.info("Location mil gaya from delivery agent!,");
         System.out.println(value);
         System.out.println("\n Kafka\n Listener");
+        log.warn("Location mil gaya from delivery agent!,");
     }
 }

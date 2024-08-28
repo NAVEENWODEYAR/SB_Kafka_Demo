@@ -32,7 +32,8 @@ public class CabDriverController {
         while (range > 0){
             cabDriverService.updateLocation(Math.random()+","+Math.random());
             Thread.sleep(1000);
-//            System.out.println(Math.random()+","+Math.random());
+            System.out.println(Math.random()+","+Math.random());
+            log.info("Inside loop");
             range--;
         }
         log.warn("Sending location status using kafka,");
