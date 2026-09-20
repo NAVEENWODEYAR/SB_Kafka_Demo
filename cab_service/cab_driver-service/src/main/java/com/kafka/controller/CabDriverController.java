@@ -21,7 +21,7 @@ public class CabDriverController {
     @ResponseStatus(HttpStatus.ACCEPTED)
     public ResponseEntity<?> test(){
         log.error("Test endpoint accessed,");
-        return ResponseEntity.ok("Welcome to CadDriverService!,");
+        return ResponseEntity.ok("Welcome to CabDriverService!,");
     }
 
     @PutMapping
